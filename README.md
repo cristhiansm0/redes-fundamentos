@@ -145,3 +145,33 @@ The main purpose of this control is to allow normal traffic to continue while is
 ![Network Traffic Analysis](imagen4.png)
 ![Network Traffic Analysis](imagen5.png)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Identifying Suspicious Destination Ports
+
+In this step, the objective was to identify three destination ports that should be blocked in order to prevent the server from being compromised.
+
+To solve this, I reviewed the Traffic Analyser table and cross-referenced the results with the IDS/IPS System table. Instead of focusing only on source IP addresses, this stage required analysing the destination ports being targeted and linking them to known malicious behaviour.
+
+The IDS/IPS data provided useful context about the hosts involved. Some of them were associated with clearly suspicious labels such as Metasploit Traffic, Potentially Bad Behaviour, and Bad Traffic. By comparing these entries with the traffic records, I identified destination ports that appeared abnormal or commonly linked to malicious activity.
+
+The most suspicious ports were:
+
+4444, which is widely known for being used by Metasploit payloads and reverse shells.
+
+7777, an uncommon port often associated with custom backdoors or unauthorised services.
+
+2222, which can be used as an alternative SSH port and may appear in suspicious activity when it does not match normal network behaviour.
+
+These ports stood out because they were either tied to malicious indicators in the IDS/IPS table or were unusual enough to suggest exploitation attempts or unauthorised access.
+
+Based on this analysis, the three destination ports selected for blocking were:
+
+4444, 7777, and 2222
+
+Blocking these ports would help reduce the attack surface and prevent suspicious traffic from reaching the target server.
+![Network Traffic Analysis](imagen6.png)
+![Network Traffic Analysis](imagen7.png)
+![Network Traffic Analysis](imagen8.png)
+
+
