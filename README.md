@@ -142,4 +142,6 @@ In this scenario, the red-marked hosts can be interpreted as systems generating 
 The main purpose of this control is to allow normal traffic to continue while isolating or denying traffic coming from suspicious hosts.
 
 ![Network Traffic Analysis](imagen3.png)
+![Network Traffic Analysis](imagen4.png)
+![Network Traffic Analysis](imagen5.png)
 
