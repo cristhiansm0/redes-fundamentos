@@ -127,3 +127,19 @@ Better baselining and asset tracking
 Improved detection and response to threats
 
 In this task, the goal is to apply these concepts in a practical way by using the provided static site to simulate a traffic analysis investigation and recover the flags.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Malicious Traffic Detection
+
+The diagram shows several internal hosts generating network traffic towards a target system. Some of these connections are marked in red, which indicates suspicious or malicious traffic, while the green connections represent legitimate traffic.
+
+This suggests that the network is being monitored by a security control capable of identifying anomalous behaviour. Once malicious traffic is detected, the system can block, drop, or prevent the communication from continuing, effectively stopping harmful packets before they reach the destination.
+
+In this scenario, the red-marked hosts can be interpreted as systems generating unauthorised or malicious traffic. From a defensive perspective, these IP addresses would likely be flagged and blocked by technologies such as a firewall, IDS/IPS, or another traffic analysis and prevention mechanism.
+
+The main purpose of this control is to allow normal traffic to continue while isolating or denying traffic coming from suspicious hosts.
+
+![Network Traffic Analysis](imagen3.png)
+
